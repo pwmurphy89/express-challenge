@@ -3,14 +3,31 @@
 <head>
 	<title>Express Challenge</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script type="text/javascript" src="controller.js"></script>
 </head>
 <body ng-controller="studentController">
 	<div class="container">
-		<div>{{message}}</div>
-			<button class="btn btn-primary" value="SORT" ng-click="sortList()">Sort</button>
-			<button class="btn btn-primary" value="REVERSE" ng-click="reverseList()">Reverse</button>
-			<div ng-repeat="student in students">{{student}}</div>
+		<h2>Here is a list of students in our class:</h2>
+		
+		<div ng-repeat="student in students"><h4>{{student}}</h4></div>
+			<div class="col-sm-8">
+				<div class="col-sm-6">
+					<h3>Sort the list alphabetically: </h3>
+				</div>
+				<div class="col-sm-4">
+					<button class="btn btn-success" value="SORT" ng-click="sortList()">Sort</button>
+				</div>
+			</div>
+			<div class="col-sm-8">
+				<div class="col-sm-6">
+					<h3>Or in reverse-alphabetical order: </h3>
+				</div>
+				<div class="col-sm-4">
+					<button class="btn btn-danger" value="REVERSE" ng-click="reverseList()">Reverse</button>
+				</div>
+			</div>
+			<h6>This simple app was built using express,mongo,angular, and node.
 	</div>
 </body>
 </html>
