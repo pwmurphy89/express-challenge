@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="expressApp">
+<head>
+	<title>Express Challenge</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+</head>
+<body ng-controller="studentController">
+	<div class="container">
+		<div>{{message}}</div>
+			<button class="btn btn-primary" value="SORT" ng-click="sortList()">Sort</button>
+			<button class="btn btn-primary" value="REVERSE" ng-click="reverseList()">Reverse</button>
+			<div ng-repeat="student in students">{{student}}</div>
+	</div>
+</body>
+</html>
+
+
+<!-- Option 1. Make an express app from scratch and set it up so that if you go to localhost:3050/students, it will print out a list of studnets in the class in alphabetical order. If you go to localhost:3050/students/reverse, it will print out a list of studnets in the class in reverse alphabetical order.
+=============================== -->
